@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c61ec97aa9b3ad90e3091ec8a9d7b695",
+    "revision": "1c21740031b62972e870c18a8546dca0",
     "url": "/campaignsEditor/index.html"
   },
   {
-    "revision": "c40129521a775d1f099b",
+    "revision": "a6ee674fe87af50118d3",
     "url": "/campaignsEditor/static/css/main.86d8dbcd.chunk.css"
   },
   {
-    "revision": "801bad2bfa78dfbafa0f",
-    "url": "/campaignsEditor/static/js/2.ea5d5cdf.chunk.js"
+    "revision": "bd56b8c54911b972cb90",
+    "url": "/campaignsEditor/static/js/2.8f2d5286.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/campaignsEditor/static/js/2.ea5d5cdf.chunk.js.LICENSE.txt"
+    "url": "/campaignsEditor/static/js/2.8f2d5286.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c40129521a775d1f099b",
-    "url": "/campaignsEditor/static/js/main.451b51ca.chunk.js"
+    "revision": "a6ee674fe87af50118d3",
+    "url": "/campaignsEditor/static/js/main.578fefd0.chunk.js"
   },
   {
     "revision": "02a7fb3a21ab4aaabdc6",

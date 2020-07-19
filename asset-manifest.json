@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/campaignsEditor/static/css/main.86d8dbcd.chunk.css",
-    "main.js": "/campaignsEditor/static/js/main.451b51ca.chunk.js",
-    "main.js.map": "/campaignsEditor/static/js/main.451b51ca.chunk.js.map",
+    "main.js": "/campaignsEditor/static/js/main.578fefd0.chunk.js",
+    "main.js.map": "/campaignsEditor/static/js/main.578fefd0.chunk.js.map",
     "runtime-main.js": "/campaignsEditor/static/js/runtime-main.3183b3da.js",
     "runtime-main.js.map": "/campaignsEditor/static/js/runtime-main.3183b3da.js.map",
-    "static/js/2.ea5d5cdf.chunk.js": "/campaignsEditor/static/js/2.ea5d5cdf.chunk.js",
-    "static/js/2.ea5d5cdf.chunk.js.map": "/campaignsEditor/static/js/2.ea5d5cdf.chunk.js.map",
+    "static/js/2.8f2d5286.chunk.js": "/campaignsEditor/static/js/2.8f2d5286.chunk.js",
+    "static/js/2.8f2d5286.chunk.js.map": "/campaignsEditor/static/js/2.8f2d5286.chunk.js.map",
     "index.html": "/campaignsEditor/index.html",
-    "precache-manifest.a9d95374c87d7f05da23d51c132af7d2.js": "/campaignsEditor/precache-manifest.a9d95374c87d7f05da23d51c132af7d2.js",
+    "precache-manifest.b699b49c2a4c2afd0363b6f93f6dca75.js": "/campaignsEditor/precache-manifest.b699b49c2a4c2afd0363b6f93f6dca75.js",
     "service-worker.js": "/campaignsEditor/service-worker.js",
     "static/css/main.86d8dbcd.chunk.css.map": "/campaignsEditor/static/css/main.86d8dbcd.chunk.css.map",
-    "static/js/2.ea5d5cdf.chunk.js.LICENSE.txt": "/campaignsEditor/static/js/2.ea5d5cdf.chunk.js.LICENSE.txt"
+    "static/js/2.8f2d5286.chunk.js.LICENSE.txt": "/campaignsEditor/static/js/2.8f2d5286.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3183b3da.js",
-    "static/js/2.ea5d5cdf.chunk.js",
+    "static/js/2.8f2d5286.chunk.js",
     "static/css/main.86d8dbcd.chunk.css",
-    "static/js/main.451b51ca.chunk.js"
+    "static/js/main.578fefd0.chunk.js"
   ]
 }
