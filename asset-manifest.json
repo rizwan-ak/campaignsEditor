@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/campaignsEditor/static/css/main.86d8dbcd.chunk.css",
-    "main.js": "/campaignsEditor/static/js/main.f45ac99f.chunk.js",
-    "main.js.map": "/campaignsEditor/static/js/main.f45ac99f.chunk.js.map",
+    "main.js": "/campaignsEditor/static/js/main.7d89e046.chunk.js",
+    "main.js.map": "/campaignsEditor/static/js/main.7d89e046.chunk.js.map",
     "runtime-main.js": "/campaignsEditor/static/js/runtime-main.3183b3da.js",
     "runtime-main.js.map": "/campaignsEditor/static/js/runtime-main.3183b3da.js.map",
     "static/js/2.8f2d5286.chunk.js": "/campaignsEditor/static/js/2.8f2d5286.chunk.js",
     "static/js/2.8f2d5286.chunk.js.map": "/campaignsEditor/static/js/2.8f2d5286.chunk.js.map",
     "index.html": "/campaignsEditor/index.html",
-    "precache-manifest.a6da6a357d1b1a9285530dcec2b56b6c.js": "/campaignsEditor/precache-manifest.a6da6a357d1b1a9285530dcec2b56b6c.js",
+    "precache-manifest.9b188b2459808b03b358cfa44d778d3c.js": "/campaignsEditor/precache-manifest.9b188b2459808b03b358cfa44d778d3c.js",
     "service-worker.js": "/campaignsEditor/service-worker.js",
     "static/css/main.86d8dbcd.chunk.css.map": "/campaignsEditor/static/css/main.86d8dbcd.chunk.css.map",
     "static/js/2.8f2d5286.chunk.js.LICENSE.txt": "/campaignsEditor/static/js/2.8f2d5286.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3183b3da.js",
     "static/js/2.8f2d5286.chunk.js",
     "static/css/main.86d8dbcd.chunk.css",
-    "static/js/main.f45ac99f.chunk.js"
+    "static/js/main.7d89e046.chunk.js"
   ]
 }
