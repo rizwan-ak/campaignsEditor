@@ -39,6 +39,7 @@ class Campaigns extends Component {
   }
 
   render() {
+    console.log(this.props.campaigns);
     const that = this;
     const dragProps = {
       onDragEnd(fromIndex, toIndex) {
@@ -47,8 +48,8 @@ class Campaigns extends Component {
         data.splice(toIndex, 0, item);
         that.setState({ data });
       },
-      nodeSelector: "tr",
-      handleSelector: "section",
+      nodeSelector: this.state.reorder ? "tr" : "section",
+      handleSelector: this.state.reorder ? "tr" : "section",
     };
     return (
       <div className="App">
@@ -75,6 +76,7 @@ class Campaigns extends Component {
               <TableBody>
                 {this.state.data.map((c, index) => (
                   <TableRow
+                    style={{ cursor: this.state.reorder ? "grab" : null }}
                     key={index}
                     onClick={() => {
                       this.props.getCampaign(c.id);
@@ -86,15 +88,17 @@ class Campaigns extends Component {
                     className={this.state.selectedIndex === index && "blueBg"}
                   >
                     <TableCell>{c.name}</TableCell>
-                    <TableCell>{c.countries[0].code}</TableCell>
-                    <TableCell>{c.currencies[0].code}</TableCell>
+                    <TableCell>
+                      {c.countries.map((c) => c.code).join(", ")}
+                    </TableCell>
+                    <TableCell>
+                      {c.currencies.map((c) => c.code).join(", ")}
+                    </TableCell>
                     <TableCell>{c.startDate}</TableCell>
                     <TableCell>{c.endDate}</TableCell>
                     <TableCell align="right">
                       {this.state.reorder ? (
-                        <section>
-                          <ImportExport />
-                        </section>
+                        <ImportExport />
                       ) : (
                         <Switch
                           checked={c.isActive}

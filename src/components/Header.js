@@ -209,15 +209,13 @@ class Header extends Component {
                 Cancel
               </Button>
             </Link>
-            <Link to="/">
-              <Button
-                className="noBorder"
-                onClick={() => this.setState({ showCancelModal: false })}
-                variant="contained"
-              >
-                Stay
-              </Button>
-            </Link>
+            <Button
+              className="noBorder"
+              onClick={() => this.setState({ showCancelModal: false })}
+              variant="contained"
+            >
+              Stay
+            </Button>
           </DialogActions>
         </Dialog>
 
@@ -238,7 +236,7 @@ class Header extends Component {
             <div>
               <CopyToClipboard
                 className="marginTop"
-                text="PROMO80"
+                text={this.props.code}
                 onCopy={() => this.setState({ copied: true })}
               >
                 <Button variant="outlined">

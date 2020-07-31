@@ -36,8 +36,8 @@ class AddCampaign extends Component {
     name: "",
     startDate: new Date(),
     endDate: new Date(),
-    countries: null,
-    currencies: null,
+    countries: [],
+    currencies: [],
     isActive: false,
     priority: "",
     discountPercentage: "",
@@ -71,8 +71,8 @@ class AddCampaign extends Component {
         discountPercentage: action.discountPercentage,
         actionTypeName: action.typeName,
         conditionsTypeName: conditions[0].typeName,
-        countries: countries[0],
-        currencies: currencies[0],
+        countries: countries,
+        currencies: currencies,
       });
     }
     this.props.getCountries();
@@ -97,6 +97,7 @@ class AddCampaign extends Component {
     });
   };
   render() {
+    console.log(this.state.countries);
     return (
       <div className="App">
         <Header
@@ -150,43 +151,38 @@ class AddCampaign extends Component {
             </div>
 
             <Autocomplete
+              multiple
               fullWidth
               autoHighlight
               filterSelectedOptions
               className="marginTop"
-              value={this.state.countries}
-              onChange={this.onCountriesChange}
               options={this.props?.countries}
+              onChange={this.onCountriesChange}
               getOptionLabel={(option) => option.name}
-              renderOption={(option) => (
-                <React.Fragment>{option.name}</React.Fragment>
-              )}
+              value={this.state.countries}
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  placeholder="Country"
                   variant="outlined"
+                  placeholder="Countries"
                 />
               )}
             />
-
             <Autocomplete
+              multiple
               fullWidth
-              name="currencies"
-              value={this.state.currencies}
-              onChange={this.onCurrenciesChange}
               autoHighlight
+              filterSelectedOptions
               className="marginTop"
               options={this.props?.currencies}
+              onChange={this.onCurrenciesChange}
               getOptionLabel={(option) => option.code}
-              renderOption={(option) => (
-                <React.Fragment>{option.code}</React.Fragment>
-              )}
+              value={this.state.currencies}
               renderInput={(params) => (
                 <TextField
-                  placeholder="Currency"
                   {...params}
                   variant="outlined"
+                  placeholder="Currencies"
                 />
               )}
             />

@@ -48,6 +48,7 @@ export const activateCampaign = (id, val) => {
 
 export const addCampaign = (data) => {
   return async (dispatch) => {
+    console.log(data);
     await axios.post("http://eleikoab.test.workplace.nu/admin/api/campaigns", {
       id: data.id,
       action: {
@@ -67,19 +68,8 @@ export const addCampaign = (data) => {
       isActive: false,
       startDate: data.startDate,
       endDate: data.endDate,
-      currencies: [
-        {
-          id: data.currencies.id,
-          code: data.currencies.code,
-        },
-      ],
-      countries: [
-        {
-          id: data.countries.id,
-          code: data.countries.code,
-          name: data.countries.name,
-        },
-      ],
+      currencies: data.currencies,
+      countries: data.countries,
     });
 
     dispatch({
