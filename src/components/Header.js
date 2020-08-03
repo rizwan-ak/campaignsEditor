@@ -88,56 +88,57 @@ class Header extends Component {
           </div>
         ) : this.state.reorder ? (
           <div style={{ float: "right" }}>
-            <Link to="/">
-              <Button
-                variant="contained"
-                className="marginRight noBorder"
-                onClick={() => {
-                  this.props.reorder(false);
-                  this.setState({ reorder: false });
-                }}
-                color="secondary"
-              >
-                <Block className="marginRight" /> Cancel
-              </Button>
-            </Link>
-            <Link to="/">
-              <Button
-                className="noBorder"
-                onClick={async () => {
-                  await this.props.reorderCampaigns(this.props.reorderData);
-                  this.props.reorder(false);
-                  this.setState({ reorder: false });
-                }}
-                variant="contained"
-              >
-                <Save className="marginRight" /> Save
-              </Button>
-            </Link>
+            <Button
+              to="/"
+              component={Link}
+              variant="contained"
+              className="marginRight noBorder"
+              onClick={() => {
+                this.props.reorder(false);
+                this.setState({ reorder: false });
+              }}
+              color="secondary"
+            >
+              <Block className="marginRight" /> Cancel
+            </Button>
+            <Button
+              to="/"
+              component={Link}
+              className="noBorder"
+              onClick={async () => {
+                await this.props.reorderCampaigns(this.props.reorderData);
+                this.props.reorder(false);
+                this.setState({ reorder: false });
+              }}
+              variant="contained"
+            >
+              <Save className="marginRight" /> Save
+            </Button>
           </div>
         ) : (
           <div style={{ float: "right" }}>
-            <Link to="/addCampaign">
-              <Button className="noBorder marginRight" variant="contained">
-                <Add className="marginRight" />
-                Add
-              </Button>
-            </Link>
+            <Button
+              to="/addCampaign"
+              component={Link}
+              className="noBorder marginRight"
+              variant="contained"
+            >
+              <Add className="marginRight" />
+              Add
+            </Button>
 
-            <Link
+            <Button
               to={{
                 pathname: "/addCampaign",
                 campaign: this.props.campaign,
               }}
+              component={Link}
+              disabled={this.props.hideOptions}
+              variant="contained"
+              className="marginRight noBorder"
             >
-              <Button
-                disabled={this.props.hideOptions}
-                variant="contained"
-                className="marginRight noBorder"
-              >
-                <Edit className="marginRight" /> Edit
-              </Button>
-            </Link>
+              <Edit className="marginRight" /> Edit
+            </Button>
 
             <Button
               disabled={this.props.hideOptions}
@@ -199,16 +200,16 @@ class Header extends Component {
             </Typography>
           </DialogContent>
           <DialogActions>
-            <Link to="/">
-              <Button
-                className="noBorder marginRight"
-                onClick={() => this.setState({ showCancelModal: false })}
-                variant="contained"
-                color="secondary"
-              >
-                Cancel
-              </Button>
-            </Link>
+            <Button
+              to="/"
+              component={Link}
+              className="noBorder marginRight"
+              onClick={() => this.setState({ showCancelModal: false })}
+              variant="contained"
+              color="secondary"
+            >
+              Cancel
+            </Button>
             <Button
               className="noBorder"
               onClick={() => this.setState({ showCancelModal: false })}
@@ -226,21 +227,32 @@ class Header extends Component {
             <Typography gutterBottom>
               Your disount code is now saved and activated.
               <br />
-              From: <span className="boldText">2020-09-15 - 2020-10-15</span>
+              From:
+              <span className="boldText">
+                {this.props?.state?.startDate +
+                  " - " +
+                  this.props?.state?.endDate}
+              </span>
               <br />
-              Countries: <span className="boldText">SE, DK, US, CA</span>
+              Countries:
+              <span className="boldText">
+                {this.props.state?.countries?.map((c) => c.code).join(", ")}
+              </span>
               <br />
-              Currencies: <span className="boldText">SEK, DKK, SEK, CAD</span>
+              Currencies:
+              <span className="boldText">
+                {this.props.state?.currencies?.map((c) => c.code).join(", ")}
+              </span>
               <br />
             </Typography>
             <div>
               <CopyToClipboard
                 className="marginTop"
-                text={this.props.code}
+                text={this.props?.state?.code}
                 onCopy={() => this.setState({ copied: true })}
               >
                 <Button variant="outlined">
-                  {this.props.code}
+                  {this.props?.state?.code}
                   <svg
                     style={{ marginLeft: 30 }}
                     xmlns="http://www.w3.org/2000/svg"
@@ -256,15 +268,15 @@ class Header extends Component {
             </div>
           </DialogContent>
           <DialogActions>
-            <Link to="/">
-              <Button
-                className="noBorder"
-                onClick={() => this.setState({ showSaveModal: false })}
-                variant="contained"
-              >
-                Ok
-              </Button>
-            </Link>
+            <Button
+              to="/"
+              component={Link}
+              className="noBorder"
+              onClick={() => this.setState({ showSaveModal: false })}
+              variant="contained"
+            >
+              Ok
+            </Button>
           </DialogActions>
         </Dialog>
       </div>

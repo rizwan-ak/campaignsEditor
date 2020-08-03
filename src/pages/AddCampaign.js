@@ -104,7 +104,7 @@ class AddCampaign extends Component {
           showSave
           hideSearch
           saveFn={() => this.props.addCampaign(this.state)}
-          code={this.state.code}
+          state={this.state}
         />
         <Grid
           container
